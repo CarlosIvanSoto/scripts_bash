@@ -26,7 +26,7 @@ sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io
 
 # Agrega tu usuario al grupo de usuarios de Docker
-sudo usermod -aG docker admon
+sudo usermod -aG docker $(whoami)
 
 # Verifica que Docker esté instalado correctamente
 docker --version
