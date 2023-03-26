@@ -9,7 +9,5 @@ sudo ufw allow 993/tcp # (para habilitar el acceso IMAPS)
 sudo ufw allow 995/udp # (para habilitar el acceso POP3S)
 sudo ufw allow 4190/udp # (para habilitar el acceso Sieve)
 
-# Deshabilitar o reiniciar UFW
-sudo ufw reset
 # Lista las reglas de UFW para verificar que todo esté configurado correctamente
 sudo ufw status verbose

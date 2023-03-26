@@ -68,7 +68,7 @@ services:
     image: analogic/poste.io
     restart: always
     container_name: poste
-    hostname: mail
+    hostname: mail.gameue.mx
     domainname: gameue.mx
     network_mode: "host"
     expose:
