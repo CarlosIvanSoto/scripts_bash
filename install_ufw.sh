@@ -18,6 +18,7 @@ sudo ufw allow http # (para habilitar el acceso HTTP)
 sudo ufw allow https # (para habilitar el acceso HTTPS)
 sudo ufw allow 9090/tcp # (para habilitar el acceso Prometheus)
 sudo ufw allow 3000/tcp # (para habilitar el acceso Grafana)
+sudo ufw allow 9000/tcp # (para habilitar el acceso Portainer)
 
 # sudo ufw allow 1234/tcp (para habilitar el acceso al puerto 1234)
 
