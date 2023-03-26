@@ -63,9 +63,50 @@ services:
     networks:
       - monitoring
 
-networks:
-  monitoring:
+  # Servidor de correo (Poste.io)
+  mailserver:
+    image: analogic/poste.io
+    restart: always
+    container_name: poste
+    hostname: mail
+    domainname: aws.gameue.mx
+    network_mode: "host"
+    expose:
+      - 25
+      - 8080
+      - 443
+      - 110
+      - 143
+      - 465
+      - 587
+      - 993
+      - 995
+      - 4190
+    ports:
+      - "25:25"
+      - "8080:8080"
+      - "110:110"
+      - "143:143"
+      - "465:465"
+      - "587:587"
+      - "993:993"
+      - "995:995"
+      - "4190:4190"
+    environment:
+      - HTTPS=ON
+      - DISABLE_CLAMAV=TRUE
+      - TZ=America/Chicago
+      - HTTP_PORT=8080
+    volumes:
+      - maildata:/data
+    networks:
+      - web
 
 volumes:
   grafana-storage:
   portainer-data:
+  maildata:
+
+networks:
+  monitoring:
+  web:
