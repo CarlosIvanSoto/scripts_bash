@@ -8,7 +8,7 @@
 
 
 ### Si deseas comprobar que el script se está ejecutando, puedes utilizar el comando ps:
-    ps aux | grep update_ip.sh
+    ps aux | grep check_ip_dns.sh
 
 ### Si en algún momento deseas detener el script, puedes utilizar el comando kill con el ID del proceso que obtuviste con el comando ps:
     kill [process_id]
