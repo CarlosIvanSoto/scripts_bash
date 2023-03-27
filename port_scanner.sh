@@ -1,6 +1,4 @@
 #!/bin/bash
-sudo apt-get install nmap
-
 echo "Obteniendo dirección IP pública..."
 ip=$(curl -s ifconfig.me)
 echo "Tu dirección IP pública es: $ip"
