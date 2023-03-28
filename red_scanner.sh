@@ -16,3 +16,4 @@ nmap -sn $RED > /dev/null -oG - | awk '/Up$/{print $2}' | while read IP; do
     echo "Sistema operativo: $(nmap -O $IP | awk '/OS details:/{print substr($0, index($0,$4))}')"
     echo "MAC address: $(arp -a $IP | awk '{print $4}')"
 done
+echo "Escaneo completo."
