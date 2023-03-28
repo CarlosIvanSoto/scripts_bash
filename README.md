@@ -21,3 +21,6 @@
 
 ### Para usar Port analizer (private) Tener instalado el programa netstat
     sudo apt-get install net-tools
+
+### Para usar red scanner 
+    sudo apt-get install nmap awk dnsutils net-tools
